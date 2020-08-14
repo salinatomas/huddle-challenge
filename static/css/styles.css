@@ -1,0 +1,366 @@
+/* GLOBALS________________ */
+:root {
+  --pink: hsl(322, 100%, 66%);
+
+  --white: #ffffff;
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+
+  --Font1: 'Open Sans', sans-serif;
+  --Font2: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--white);
+  font-size: 18px;
+  font-family: var(--Font1);
+  color: var(--veryDarkCyan);
+  font-weight: 400;
+  margin: 0;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  font-family: var(--Font2);
+  font-weight: 600;
+  margin: 0;
+}
+.u-wrapper {
+  padding: 0 1em;
+  width: 100%;
+}
+.u-button {
+  border: none;
+  background: var(--white);
+  border-radius: 50px;
+  padding: .5em 1.5em;
+  font-family: var(--Font1);
+  font-weight: 700;
+  font-size: 1em;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+
+  box-shadow: 0 4px 8px -2px var(--grayishBlue);
+}
+.u-button.pink {
+  background: var(--pink);
+  color: white;
+  width: 80%;
+  font-size: .8em;
+  padding: 1em 0;
+}
+.u-h1 {
+  font-size: 1.5em;
+}
+.u-h2 {
+  font-size: 1.2em;
+}
+.u-h3 {
+  font-size: 1em;
+}
+
+
+/* HEADER_____________________ */
+.header-hero_container {
+  background-color: var(--veryPaleCyan);
+  background-image: url('../images/bg-hero-mobile.svg');
+  background-position: 0% 30%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-grid img {
+  width: 150px;
+}
+
+
+/* HERO______________________________ */
+.hero {
+  text-align: center;
+  padding-top: 4em;
+  padding-bottom: 2em;
+}
+.hero-grid {
+  padding: 0 .8em 0em;
+}
+.hero-content .u-p {
+  margin: 0;
+  margin-top: 1em;
+}
+.hero-content .u-button {
+  margin: 1.8em 0;
+}
+.hero-image {
+  margin-top: .7em;
+}
+.hero-image img {
+  width: 100%;
+}
+
+
+/* FEATURES_____________________________ */
+.features {
+  background: var(--white);
+  text-align: center;
+  padding: 5em 0 2em;
+}
+.features-grid {
+  display: grid;
+  grid-row-gap: 5em;
+}
+.features-item {
+  padding: 3em 2em 1em;
+  border-radius: 1em;
+  box-shadow: 0 0 10px -5px var(--grayishBlue);
+}
+.features-item .features-image {
+  margin-bottom: 3em;
+}
+.features-item .features-image img{
+  width: 100%;
+  height: 100%;
+}
+.features-description .u-p{
+  color: var(--grayishBlue);
+  font-weight: 400;
+}
+
+
+/* STARTED________________________ */
+.started {
+  position: relative;
+  top: 85px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.started-grid {
+  border-radius: 1em;
+  box-shadow: 0 0 10px -5px var(--grayishBlue);
+  padding: 2.5em 0;
+  background: var(--white);
+  text-align: center;
+}
+.started-grid .u-button {
+  margin-top: 1em;
+}
+
+
+/* FOOTER______________________________ */
+.footer {
+  background: var(--veryDarkCyan);
+  padding: 10em 0 3em;
+  color: white;
+}
+.footer-grid {
+  padding-left: 2em;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.footer-grid .logo {
+  margin-bottom: 2em;
+}
+.footer-grid .footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.footer-content p {
+  margin: 0;
+}
+.location {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+}
+.contact-phone {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin: 2em 0;
+}
+.contact-email {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+}
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-content li {
+  margin: 1em 0; 
+}
+.footer-content li a {
+  color: white; 
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.footer-content .about {
+  margin-top: 5em;
+}
+.footer-content .terms {
+  margin-top: 1.5em;
+}
+.social {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  gap: .5em;
+}
+.social a {
+  color: white;
+  border: 1px solid white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+.social a i{
+  font-weight: 400;
+}
+
+
+
+/* BREAKPOINTS________________________ */
+@media screen and (min-width: 768px) {
+  .u-button.pink {
+    width: 280px;
+  }
+
+  .header-hero_container {
+    background-color: var(--veryPaleCyan);
+    background-image: url('../images/bg-hero-desktop.svg');
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .header-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .hero-grid {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  .hero-content {
+    max-width: 550px;
+    margin-right: 2em;
+  }
+
+  .features-grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-row-gap: 2em;
+  }
+  .features-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    text-align: left;
+    align-items: center;
+    justify-items: center;
+  }
+  .features-image {
+    grid-area: image;
+  }
+  .features-description {
+    grid-area: description;
+  }
+  .features-item:first-child,
+  .features-item:last-child {
+    grid-template-areas: "description image";
+  }
+  .features-item:nth-child(2) {
+    grid-template-areas: "image description";
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .u-wrapper {
+    padding: 0 4em;
+  }
+  .u-h1 {
+    font-size: 2.5em;
+  }
+  .u-h2 {
+    font-size: 1.8em;
+  }
+  .u-h3 {
+    font-size: 1.5em;
+  }
+  .u-button {
+    padding: 1em 0;
+    font-size: .8em;
+    width: 200px;
+  }
+  
+  .hero-content {
+    max-width: 550px;
+    margin-right: 100px;
+  }
+
+
+  .features {
+    padding: 8em 0 4em;
+  }
+  .features-item {
+    grid-column-gap: 5em;
+  }  
+  .features-image {
+    width: 400px;
+  }
+  .features-description {
+    margin: 0 3em;
+  }
+  
+
+  .started {
+    max-width: 1000px;
+  }
+
+  .footer-grid .footer-content {
+    grid-template-columns: 4fr 2fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+    grid-column-gap: 1.2em;
+  }
+  .footer-grid .logo {
+    margin-bottom: 0;
+  }
+  .footer-content .location, 
+  .footer-content .social {
+    margin-top: 2em;
+  }
+  .footer-content .about,
+  .footer-content .terms {
+    margin-top: 1em;
+  }
+  .footer-content .social {
+    margin-left: 2em;
+  }
+  .footer-content .contact {
+    margin: 0 2em;
+  }
+}
